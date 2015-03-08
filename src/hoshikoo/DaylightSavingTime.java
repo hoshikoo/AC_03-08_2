@@ -48,17 +48,14 @@ public class DaylightSavingTime {
            return;
        }
 
-
         System.out.println("Enter the day");
         int day = input.nextInt();
 
         DecimalFormat twodigitsMonth = new DecimalFormat("00");
         System.out.println(twodigitsMonth.format(monthNum));
-         DecimalFormat twodigitsDay = new DecimalFormat("00");
+        DecimalFormat twodigitsDay = new DecimalFormat("00");
         System.out.println(twodigitsDay.format(day));
-
-
-
+        System.out.println((twodigitsMonth.format(monthNum))+(twodigitsDay.format(day)));
 
 
     }
