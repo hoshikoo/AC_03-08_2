@@ -52,10 +52,19 @@ public class DaylightSavingTime {
         int day = input.nextInt();
 
         DecimalFormat twodigitsMonth = new DecimalFormat("00");
-        System.out.println(twodigitsMonth.format(monthNum));
+        /*System.out.println(twodigitsMonth.format(monthNum)); */
         DecimalFormat twodigitsDay = new DecimalFormat("00");
-        System.out.println(twodigitsDay.format(day));
-        System.out.println((twodigitsMonth.format(monthNum))+(twodigitsDay.format(day)));
+        /*System.out.println(twodigitsDay.format(day));  */
+        /* System.out.println((twodigitsMonth.format(monthNum))+(twodigitsDay.format(day))); */
+        String MonthDay = (twodigitsMonth.format(monthNum))+(twodigitsDay.format(day));
+        int MMDD = Integer.parseInt(MonthDay);
+        /* System.out.println(MMDD+MMDD);  */
+
+        if (MMDD > 0307 && MMDD < 1101) {
+            System.out.println("Daylight Savings Time is in effect");
+        }else {
+            System.out.println("Daylight Savings Time is not in effect");
+        }
 
 
     }
